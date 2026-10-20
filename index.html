@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Колледж в сфере образования — Учи.ру</title>
+<meta name="description" content="СПО онлайн: поступление без ОГЭ и ЕГЭ, диплом государственного образца, практика в школе.">
+<style>
+@font-face{font-family:'Oceanic Grotesk Condensed';src:url(fonts/OceanicGroteskCondensed-Extrabold.ttf) format('truetype');font-weight:800;font-display:swap}
+@font-face{font-family:'Factor A';src:url(fonts/FactorA-Regular.ttf) format('truetype');font-weight:400;font-display:swap}
+@font-face{font-family:'Factor A';src:url(fonts/FactorA-Medium.otf) format('opentype');font-weight:500;font-display:swap}
+@font-face{font-family:'Factor A';src:url(fonts/FactorA-Bold.ttf) format('truetype');font-weight:700;font-display:swap}
+:root{
+  --violet:#6656f7; --navy:#362f73; --lilac:#e7e3ff; --lilac2:#dfd9ff; --lilac3:#ada4ff;
+  --pink:#fe5c57; --pink2:#ff8a86; --yellow:#ffe16c; --white:#fff; --dark:#111;
+  --display:'Oceanic Grotesk Condensed','Oswald','Impact',sans-serif;
+  --text:'Factor A',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--dark);color:var(--navy);font-family:var(--text);line-height:1.5;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,.display{font-family:var(--display);font-weight:800;line-height:.95;text-transform:none}
+section,footer{position:relative;overflow:hidden}
+.wrap{padding:0}
+h2{font-size:clamp(44px,7.5vw,96px);text-align:center}
+.hl{position:relative;display:inline-block;z-index:0}
+.hl::before{content:"";position:absolute;left:-.02em;right:-.02em;top:.26em;bottom:.1em;background:var(--yellow);transform:rotate(-1deg);z-index:-1}
+
+/* HERO */
+.hero{background:var(--violet);height:100vh;height:100svh;min-height:640px;color:#fff;padding:120px 40px}
+.hero-vector{position:absolute;right:0;bottom:0;width:1280px;height:900px;max-width:none;pointer-events:none}
+.hero-kids{position:absolute;right:-114px;bottom:-11svh;height:96svh;min-height:600px;width:auto;max-width:none}
+.hero-kids-video{height:auto;min-height:0;width:920px;bottom:0;right:-190px}
+.hero-wave{position:absolute;bottom:0;left:50%;width:2600px;max-width:none;transform:translateX(calc(-50% - 36px));height:120px}
+.nav{position:absolute;top:32px;left:40px;right:40px;display:flex;align-items:center;justify-content:space-between;z-index:3}
+.nav .logo{width:184px}
+.nav ul{list-style:none;display:flex;gap:32px;font-size:20px;position:absolute;left:50%;transform:translateX(-50%)}
+.nav ul a:hover{opacity:.7}
+.btn-white{background:#fff;color:var(--navy);font-weight:500;font-size:18px;padding:10px 20px;border-radius:10px;transition:transform .15s}
+.btn-white:hover{transform:translateY(-2px)}
+.hero-content{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:space-between;height:100%;min-height:400px;width:100%}
+.hero h1{font-size:clamp(64px,9.4vw,120px);width:100%;position:relative}
+.hero h1 .mark{position:relative;display:inline-block;z-index:0}
+.hero h1 .mark::before{content:"";position:absolute;left:-.03em;right:-.03em;top:.04em;bottom:-.04em;background:var(--pink);transform:rotate(-1deg);z-index:-1}
+.hero p.lead{font-size:24px;max-width:380px;margin-bottom:40px}
+
+/* WHY */
+.why{--sbg:var(--navy);padding:120px 40px 200px}
+.why h2{color:var(--navy);position:relative;z-index:0;margin-bottom:60px}
+.why h2 .w{color:#fff}
+.why h2 .y{position:relative}
+.why h2 .y::before{content:"";position:absolute;left:-.02em;right:-.02em;top:.26em;bottom:.08em;background:var(--yellow);z-index:-1}
+.why-grid{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;position:relative;z-index:1}
+.why-card{flex:1 1 300px;height:444px;border-radius:12px;overflow:hidden;position:relative}
+.why-card .photo{position:absolute;inset:0 0 auto 0;height:70%;object-fit:cover;object-position:center top;width:100%}
+.why-card .cap{position:absolute;z-index:2;left:0;right:0;bottom:0;height:190px;border-radius:12px;display:flex;align-items:center;justify-content:center;text-align:center;padding:0 14px;font-family:var(--display);font-weight:800;font-size:48px;line-height:.9}
+.c1{background:#ffe476}.c1 .cap{background:var(--lilac2);color:var(--navy)}
+.c2{background:var(--lilac3)}.c2 .cap{background:var(--pink);color:#fff}
+.c3{background:var(--lilac3)}.c3 .cap{background:var(--violet);color:#fff}
+.stk{position:absolute;z-index:1}
+.why-wave{position:absolute;bottom:-1px;left:50%;width:782px;max-width:none;transform:translateX(calc(-50% + 248px));height:120px;pointer-events:none}
+
+/* ADVANTAGES */
+.adv{--sbg:#fff;padding:120px 40px}
+.adv .wrap{display:flex;gap:128px;align-items:flex-start;padding:0}
+.adv .l{flex:1;position:relative}
+.hy{background:linear-gradient(var(--yellow),var(--yellow)) 0 78%/100% 58% no-repeat;box-decoration-break:clone;-webkit-box-decoration-break:clone;padding:0 .02em;margin:0 -.02em}
+.adv h2{text-align:left;font-size:clamp(44px,7.5vw,96px);position:relative;margin-bottom:24px}
+.adv .l p{font-size:24px;line-height:1.4;position:relative}
+.stats{flex:1;display:flex;flex-direction:column;gap:64px}
+.stat b{display:block;font-family:var(--display);font-size:clamp(64px,9.4vw,120px);line-height:.9;font-weight:800}
+.stat span{font-size:24px;line-height:1.4}
+
+/* STEPS */
+.steps{--sbg:var(--navy);padding:0;overflow:clip}
+.steps-pin{position:sticky;top:0;height:100vh;height:100svh;padding:80px 40px;display:flex;flex-direction:column;justify-content:center}
+.steps h2{margin-bottom:48px;color:#fff}
+.steps-view{container-type:inline-size}
+.steps-track{display:flex;gap:16px;padding-inline:calc((100cqw - min(1024px,100cqw))/2);will-change:transform}
+.step{flex:0 0 min(1024px,100cqw);background:#fff;border-radius:24px;padding:16px;height:480px;display:flex;gap:16px}
+.step .t{flex:1;min-width:0;padding:16px;display:flex;flex-direction:column;gap:8px}
+.step h3{font-size:56px;line-height:1;padding-bottom:8px}
+.step p{font-size:20px;line-height:1.5}
+.step img,.step video{flex:1;min-width:0;height:100%;object-fit:cover;border-radius:16px}
+
+/* PRACTICE */
+.practice{height:800px;padding:120px 40px;display:flex;justify-content:flex-start;background:#fff url(assets/practice.jpg) center/cover no-repeat}
+.practice-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.practice .hs{display:flex;flex-direction:column;gap:4px;align-items:flex-start;position:relative;z-index:1}
+.practice .hs span{background:var(--violet);color:#fff;font-family:var(--display);font-weight:800;font-size:clamp(52px,9.4vw,120px);line-height:.8;padding:0 4px;white-space:nowrap}
+
+/* DIRECTIONS */
+.dirs{--sbg:var(--navy);padding:120px 40px}
+.dirs h2{color:#fff;max-width:868px;margin:0 auto 60px;position:relative}
+.dirs h2 .n{color:var(--navy);position:relative;z-index:0}
+.dirs h2 .n::before{content:"";position:absolute;left:-.02em;right:-.02em;top:.26em;bottom:.08em;background:var(--yellow);transform:rotate(-1deg);z-index:-1}
+.dir-grid{display:flex;gap:32px;padding:16px 0;flex-wrap:wrap}
+.dir{flex:1 1 300px;border-radius:16px;overflow:hidden;display:flex;flex-direction:column;transition:transform .2s}
+.dir:hover{transform:translateY(-4px)}
+.dir .top{height:160px;margin-bottom:-16px;position:relative;overflow:hidden}
+.dir .body{position:relative;border-radius:16px;padding:24px;background:#fff;display:flex;flex-direction:column;gap:40px;flex:1;z-index:1}
+.dir h3{font-size:48px;line-height:.9;min-height:120px}
+.dir .code{font-size:20px}
+.d1 .top{background:var(--violet)}
+.d1 .top img{position:absolute;bottom:0;left:50%;width:1625px;max-width:none;height:98px;transform:translateX(calc(-50% - .8px))}
+.d2 .top{background:var(--pink2)}
+.d2 .top img{position:absolute;max-width:none}
+.d3 .top{background:var(--yellow)}
+.d3 .top img{position:absolute;width:535px;height:221px;max-width:none}
+
+/* PARTNERS */
+.partners{--sbg:#fff;padding:120px 40px}
+.partners h2{margin-bottom:80px}
+.logos{display:flex;gap:60px;align-items:center;justify-content:center;flex-wrap:wrap}
+.logos img{height:auto}
+
+/* PRICE */
+.price{--sbg:#fff;padding:120px 40px}
+.price-card{border-radius:24px;overflow:hidden;display:flex}
+.price-l{background:var(--lilac);padding:32px;flex:0 0 64%;display:flex;flex-direction:column;gap:40px}
+.price-l .k{font-size:24px;font-weight:500}
+.price-l .v{font-family:var(--display);font-weight:800;font-size:clamp(48px,6.25vw,80px);line-height:.9;margin:8px 0}
+.price-l p{font-size:20px}
+.price-l h4{font-size:20px;font-weight:500;margin-bottom:8px}
+.price-l ul{padding-left:30px;font-size:20px;display:grid;gap:8px}
+.price-r{background:var(--violet);padding:32px;flex:1;display:flex;flex-direction:column;justify-content:space-between;gap:32px;color:#fff}
+.price-r h2{text-align:left;font-size:clamp(44px,6.25vw,80px)}
+form{display:grid;gap:16px}
+form input{border:0;border-radius:8px;padding:16px;font:inherit;font-size:20px;color:var(--navy);width:100%}
+form input::placeholder{color:var(--navy);opacity:.5}
+form input:focus{outline:3px solid var(--yellow)}
+form button{background:var(--pink);color:#fff;border:0;border-radius:8px;height:70px;font-family:var(--display);font-weight:800;font-size:32px;cursor:pointer;transition:filter .15s}
+form button:hover{filter:brightness(1.08)}
+.ok{display:none;font-size:20px;background:#fff;color:var(--navy);padding:16px;border-radius:8px}
+
+/* FAQ */
+.faq{--sbg:#fff;padding:120px 40px}
+.faq h2{position:relative;margin-bottom:40px}
+.faq h2 .y{position:relative;z-index:0}
+.faq h2 .y::before{content:"";position:absolute;left:-.02em;right:-.02em;top:.3em;bottom:.08em;background:var(--yellow);transform:rotate(-1deg);z-index:-1}
+.acc{max-width:800px;margin:0 auto;border-radius:32px;overflow:hidden}
+.acc details{border-radius:24px}
+.acc summary{list-style:none;display:flex;justify-content:space-between;gap:16px;padding:16px 24px;font-size:24px;font-weight:500;cursor:pointer}
+.acc summary::-webkit-details-marker{display:none}
+.acc summary img{width:24px;height:24px;flex:none;transition:transform .2s}
+.acc details[open] summary img{transform:rotate(180deg)}
+.acc summary:hover{background:#f6f4ff}
+.acc details p{padding:0 24px 16px;font-size:18px}
+.up{display:flex;justify-content:center;padding-top:32px}
+.up a{color:var(--pink);font-weight:800;font-size:16px;padding:16px 24px;border-radius:12px}
+.up a:hover{background:#fff1f0}
+
+/* FOOTER */
+footer{--sbg:#fff;padding:120px 40px 200px}
+.foot{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;font-size:18px}
+.foot img{width:180px;height:28px}
+.eye{position:absolute;left:50%;bottom:-42px;width:250px;height:180px;transform:translateX(-50%)}
+.eye img{position:absolute;inset:0;width:100%;height:100%}
+
+
+/* SCROLL SQUIGGLE */
+.why::before,.adv::before,.steps::before,.dirs::before,.partners::before,.price::before,.faq::before,footer::before{content:"";position:absolute;inset:0;background:var(--sbg);z-index:-1}
+
+/* FIXED CTA */
+.fab{position:fixed;left:50%;bottom:24px;translate:-50% 0;z-index:50;background:var(--pink);color:#fff;border-radius:8px;height:70px;padding:0 36px;display:flex;align-items:center;justify-content:center;font-family:var(--display);font-weight:800;font-size:32px;line-height:.9;white-space:nowrap;transition:opacity .3s,translate .3s,filter .15s}
+.fab:hover{filter:brightness(1.08)}
+.fab.hide{opacity:0;translate:-50% 24px;pointer-events:none}
+
+/* ANIMATIONS */
+@keyframes rise{from{opacity:0;translate:0 32px}to{opacity:1;translate:0 0}}
+@keyframes slidein{from{opacity:0;translate:80px 0}to{opacity:1;translate:0 0}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.hero .nav{animation:fade .8s .1s both}
+.hero h1{animation:rise .9s .15s cubic-bezier(.2,.7,.2,1) both}
+.hero p.lead{animation:rise .9s .45s cubic-bezier(.2,.7,.2,1) both}
+.hero-kids{animation:slidein 1s .2s cubic-bezier(.2,.7,.2,1) both}
+.hero-vector{animation:fade 1s both}
+.js .rv{opacity:0;translate:0 40px;transition:opacity .8s cubic-bezier(.2,.7,.2,1),translate .8s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.js .rv.in{opacity:1;translate:0 0}
+.why-card,.dir,.step{transition:transform .25s ease,box-shadow .25s ease}
+.why-card:hover{transform:translateY(-6px)}
+.dir:hover{box-shadow:0 12px 32px rgba(0,0,0,.2)}
+.dir:nth-child(1){rotate:-3deg}
+.dir:nth-child(2){rotate:2deg}
+.dir:nth-child(3){rotate:-2deg}
+.dir:hover{rotate:0deg}
+.js .dir.rv{translate:0 0;scale:.6;opacity:0;transition:scale .8s cubic-bezier(.2,.8,.2,1.15),opacity .6s,rotate .3s,transform .25s,box-shadow .25s;transition-delay:var(--d,0s),var(--d,0s),0s,0s,0s}
+.js .dir.rv.in{scale:1;opacity:1}
+.logos img{transition:transform .25s ease}
+.logos img:hover{transform:scale(1.06)}
+.hl::before,.hero h1 .mark::before{transform-origin:left center}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js .rv{opacity:1;translate:none}
+}
+
+@media (max-width:900px){
+  .why h2 .y,.dirs h2 .n,.faq h2 .y{background:linear-gradient(var(--yellow),var(--yellow)) 0 78%/100% 58% no-repeat;box-decoration-break:clone;-webkit-box-decoration-break:clone;padding:0 .02em}
+  .why h2 .y::before,.dirs h2 .n::before,.faq h2 .y::before{display:none}
+  .why h2 .w{margin-right:.05em}
+  .nav ul{display:none}
+  .hero-kids{right:-80px;bottom:auto;top:260px;height:auto;min-height:0;width:640px}
+  .steps{height:auto!important}
+  .steps-pin{position:static;height:auto;padding:72px 40px}
+  .steps-view{overflow-x:auto;scroll-snap-type:x mandatory}
+  .steps-track{transform:none!important;padding-inline:0}
+  .step{flex:0 0 90%;scroll-snap-align:center}
+  .hero{padding:120px 40px}
+  .hero-content{min-height:700px}
+  .why,.adv,.dirs,.partners,.price,.faq{padding-top:72px;padding-bottom:72px}
+  .adv .wrap{flex-direction:column;gap:48px}
+  .step{flex-direction:column;height:auto}
+  .step img,.step video{height:260px;flex:none}
+  .step h3{font-size:40px}
+  .price-card{flex-direction:column}
+  .price-l{flex:none}
+  .price-r{gap:24px}
+  .practice{height:560px}
+  .logos{gap:32px}
+}
+@media (max-width:560px){
+  .practice .hs span{font-size:40px}
+  .price-l,.price-r{padding:24px}
+  .price-l .v{font-size:44px}
+  .fab{left:16px;right:16px;translate:0 0;width:auto;height:56px;font-size:26px;bottom:16px}
+  .fab.hide{translate:0 24px}
+  .nav .btn-white{padding:10px 12px;font-size:15px}
+  .nav .logo{width:130px}
+  .hero p.lead{font-size:20px}
+  .why-card .cap{font-size:36px}
+  .dir h3{font-size:36px;min-height:0}
+  .hero{padding:96px 40px 150px}
+  .hero-content{min-height:0}
+  .hero-vector{width:900px;height:633px;right:-300px;bottom:262px}
+  .hero-kids{width:400px;height:auto;min-height:0;top:auto;bottom:262px;right:-40px}
+  .hero p.lead{max-width:none;margin-bottom:0}
+}
+</style>
+</head>
+<body>
+
+<section class="hero" id="top">
+  <img class="hero-vector" src="assets/hero-vector.svg" alt="">
+  <img class="hero-kids hero-kids-img" src="assets/hero-kids.avif" alt="Улыбающиеся школьники с тетрадями">
+  <canvas class="hero-kids hero-kids-video" id="heroCanvas" width="1000" height="704" role="img" aria-label="Улыбающиеся школьники с тетрадями" hidden></canvas>
+  <video id="heroVideo" src="assets/hero-video.mp4" muted loop playsinline preload="auto" style="display:none"></video>
+  <img class="hero-wave" src="assets/hero-wave.svg" alt="">
+  <nav class="nav">
+    <a href="#top"><img class="logo" src="assets/logo.svg" alt="Учи.ру"></a>
+    <ul>
+      <li><a href="#directions">Направления</a></li>
+      <li><a href="#price">Стоимость</a></li>
+      <li><a href="#faq">Вопросы</a></li>
+    </ul>
+    <a class="btn-white" href="#price">Оставить заявку</a>
+  </nav>
+  <div class="hero-content">
+    <h1>Колледж<br>в сфере<br><span class="mark">образования</span></h1>
+    <p class="lead">Готовим новое поколение профессионалов в образовании</p>
+  </div>
+</section>
+
+<section class="why" id="why">
+  <h2><span class="w">Почему</span> <span class="y">стоит учиться</span></h2>
+  <div class="why-grid">
+    <div class="why-card c1">
+      <img class="photo" src="assets/card1-b.jpg" alt="">
+      <img class="stk" style="left:30px;top:185px;width:183px;transform:rotate(180deg)" src="assets/sticker1.svg" alt="">
+      <div class="cap">Поступление без ОГЭ и ЕГЭ</div>
+    </div>
+    <div class="why-card c2">
+      <img class="photo" src="assets/card2.jpg" alt="" style="height:62%">
+      <div class="cap">Диплом государственного образца</div>
+    </div>
+    <div class="why-card c3">
+      <img class="photo" src="assets/card3-b.jpg" alt="" style="height:62%">
+      <img class="stk" style="left:101px;top:180px;width:257px" src="assets/sticker3.svg" alt="">
+      <div class="cap">Онлайн формат обучения</div>
+    </div>
+  </div>
+  <img class="why-wave" src="assets/games-wave.svg" alt="">
+</section>
+
+<section class="adv">
+  <div class="wrap">
+    <div class="l">
+      <h2>Преимущества <span class="hy">Учи.ру</span></h2>
+      <p>Учи.ру — крупнейшая в России школьная онлайн-платформа, которая входит в VK</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><b data-to="15" data-suf=" млн">15 млн</b><span>Учеников</span></div>
+      <div class="stat"><b data-to="6" data-suf=" млн">6 млн</b><span>Родителей</span></div>
+      <div class="stat"><b data-to="750" data-suf=" тыс">750 тыс</b><span>Учителей</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="steps" id="steps">
+ <div class="steps-pin">
+  <h2>Как проходит обучение</h2>
+  <div class="steps-view">
+  <div class="steps-track">
+    <article class="step"><div class="t"><h3>Онлайн лекции</h3><p>Смотрите лекции в удобное время с любого устройства. Запись всегда доступна, а на живых эфирах можно задать вопрос преподавателю.</p></div><video src="assets/step-1.mp4" poster="assets/step.jpg" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video></article>
+    <article class="step"><div class="t"><h3>Кураторы</h3><p>Куратор сопровождает весь период обучения: напоминает о дедлайнах и отвечает на вопросы по учёбе и практике.</p></div><video src="assets/step-2.mp4" poster="assets/step.jpg" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video></article>
+    <article class="step"><div class="t"><h3>Кабинет с прогрессом</h3><p>В личном кабинете видны расписание, оценки и пройденные темы: всегда понятно, как идёт обучение.</p></div><video src="assets/step-3.mp4" poster="assets/step.jpg" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video></article>
+  </div>
+  </div>
+ </div>
+</section>
+
+<section class="practice" aria-label="Практика в государственной школе">
+  <video class="practice-video" src="assets/practice.mp4" poster="assets/practice.jpg" autoplay muted loop playsinline preload="auto" aria-hidden="true"></video>
+  <div class="hs"><span>Практика</span><span>в государственной</span><span>школе</span></div>
+</section>
+
+<section class="dirs" id="directions">
+  <h2>Выбери <span class="n">направление</span> обучения</h2>
+  <div class="dir-grid">
+    <a class="dir d1" href="#price">
+      <div class="top"><img src="assets/dir1-wave.svg" alt=""></div>
+      <div class="body">
+        <h3>Дошкольное образование</h3><span class="code">44.02.01</span>
+      </div>
+    </a>
+    <a class="dir d2" href="#price">
+      <div class="top">
+        <img src="assets/poly273.svg" alt="" style="left:62.6px;top:95.49px;width:107px;height:81px">
+        <img src="assets/poly275.svg" alt="" style="left:287px;top:50.6px;width:157px;height:126px">
+        <img src="assets/poly275.svg" alt="" style="left:-42px;top:50.6px;width:157px;height:126px">
+        <img src="assets/poly274.svg" alt="" style="left:147px;top:-17px;width:180px;height:193px">
+      </div>
+      <div class="body">
+        <h3>Преподавание в начальных классах</h3><span class="code">44.02.02</span>
+      </div>
+    </a>
+    <a class="dir d3" href="#price">
+      <div class="top">
+        <img src="assets/dir3-wave.svg" alt="" style="left:-245px;top:0">
+        <img src="assets/dir3-wave.svg" alt="" style="left:133px;top:12px">
+      </div>
+      <div class="body">
+        <h3>Педагогика дополнительного образования</h3><span class="code">44.02.03</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<section class="partners">
+  <h2>Наши партнёры</h2>
+  <div class="logos">
+    <img src="assets/mfti.svg" alt="МФТИ" width="240" height="72">
+    <img src="assets/npr.svg" alt="" width="148" height="103">
+    <img src="assets/she.svg" alt="" width="96" height="96">
+    <img src="assets/asi.png" alt="" width="276" height="108">
+  </div>
+</section>
+
+<section class="price" id="price">
+  <div class="price-card">
+    <div class="price-l">
+      <div>
+        <div class="k">Стоимость обучения</div>
+        <div class="v">от 200 ₽ / мес</div>
+        <p>с государственной поддержкой или от 20 000 ₽ в месяц, если платите самостоятельно</p>
+      </div>
+      <div>
+        <h4>Что входит</h4>
+        <ul>
+          <li>Обучение онлайн на платформе Учи.ру</li>
+          <li>Диплом о среднем профессиональном образовании</li>
+          <li>Отсрочка от армии</li>
+          <li>Поддержка куратора</li>
+          <li>Портфолио с реальными проектами</li>
+          <li>Академический отпуск</li>
+        </ul>
+      </div>
+    </div>
+    <div class="price-r">
+      <h2>Оставьте заявку</h2>
+      <form id="lead">
+        <input name="name" placeholder="Имя" autocomplete="name" required>
+        <input name="phone" type="tel" placeholder="Телефон" autocomplete="tel" required>
+        <button type="submit">Оставить заявку</button>
+        <div class="ok" id="ok">Спасибо! Мы свяжемся с вами в ближайшее время.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <h2>Популярные <span class="y">вопросы</span></h2>
+  <div class="acc">
+    <details><summary>Когда первый набор? <img src="assets/collapse.svg" alt=""></summary><p>—</p></details>
+    <details><summary>Какие специальности будут в первом наборе? <img src="assets/collapse.svg" alt=""></summary><p>Дошкольное образование, преподавание в начальных классах, педагогика дополнительного образования.</p></details>
+    <details><summary>Как проходят занятия? <img src="assets/collapse.svg" alt=""></summary><p>—</p></details>
+    <details><summary>Сколько стоит обучение? <img src="assets/collapse.svg" alt=""></summary><p>От 200 ₽ в месяц с государственной поддержкой или от 20 000 ₽ в месяц при самостоятельной оплате.</p></details>
+    <details><summary>Какой диплом получит выпускник? <img src="assets/collapse.svg" alt=""></summary><p>Диплом государственного образца о среднем профессиональном образовании.</p></details>
+  </div>
+  <div class="up"><a href="#top">Вернуться наверх</a></div>
+</section>
+
+<footer>
+  <div class="foot">
+    <img src="assets/logo-footer.svg" alt="Учи.ру">
+    <p>© 2026 UCHI.RU, ООО Учи.ру</p>
+  </div>
+  <div class="eye" aria-hidden="true"><img src="assets/eye.svg" alt=""></div>
+</footer>
+
+<a class="fab" id="fab" href="#price">Оставить заявку</a>
+
+<script>
+document.documentElement.classList.add('js');
+(function(){
+  var reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+  // reveal on scroll
+  var sel=[['.why h2'],['.why-card',1],['.adv h2'],['.adv .l p'],['.stat',1],['.steps h2'],['.practice .hs span',1],['.dirs h2'],['.dir',1],['.partners h2'],['.logos img',1],['.price-l'],['.price-r'],['.faq h2'],['.acc details',1],['.up']];
+  var els=[];
+  sel.forEach(function(x){document.querySelectorAll(x[0]).forEach(function(e,i){e.classList.add('rv');if(x[1])e.style.setProperty('--d',(i*0.12)+'s');els.push(e)})});
+  var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15});
+  els.forEach(function(e){io.observe(e)});
+  // counters
+  var co=new IntersectionObserver(function(en){en.forEach(function(e){
+    if(!e.isIntersecting)return;co.unobserve(e.target);
+    var el=e.target,to=+el.dataset.to,suf=el.dataset.suf||'';
+    if(reduce){return}
+    var t0=performance.now(),d=1800;
+    (function f(t){var k=Math.min(1,(t-t0)/d),v=1-Math.pow(1-k,3);el.textContent=Math.round(to*v)+suf;if(k<1)requestAnimationFrame(f)})(t0);
+  })},{threshold:.6});
+  document.querySelectorAll('[data-to]').forEach(function(e){if(!reduce)e.textContent='0'+e.dataset.suf;co.observe(e)});
+  // hero video: knock out the black background (luma key) on a canvas
+  (function(){
+    var v=document.getElementById('heroVideo'),c=document.getElementById('heroCanvas'),img=document.querySelector('.hero-kids-img');
+    if(!v||!c||reduce)return;
+    var ctx=c.getContext('2d',{willReadFrequently:true});
+    var SX=250,SY=30,SW=1490,SH=1050,W=c.width,H=c.height,k=W/SW;
+    var MX=1720,MY=1000;           // corner with the generator watermark
+    var running=false,shown=false,seen=new Uint8Array(W*H),stack=new Int32Array(W*H);
+    function frame(){
+      if(!running)return;
+      try{
+        var f=v.videoWidth/1920;ctx.drawImage(v,SX*f,SY*f,SW*f,SH*f,0,0,W,H);
+        var d=ctx.getImageData(0,0,W,H),a=d.data;
+        var mx=(MX-SX)*k,my=(MY-SY)*k;
+        // background = dark pixels connected to the frame border (keeps dark hair/straps opaque)
+        var N=W*H,st=0,T=24;
+        for(var x=0;x<W;x++){push(x);push((H-1)*W+x)}
+        for(var y=1;y<H-1;y++){push(y*W);push(y*W+W-1)}
+        function push(p){if(seen[p]||lum(p)>=T)return;seen[p]=1;stack[st++]=p}
+        function lum(p){var i=p*4,r=a[i],g=a[i+1],b=a[i+2];return r>g?(r>b?r:b):(g>b?g:b)}
+        while(st){
+          var p=stack[--st],px=p%W;
+          if(px>0)push(p-1);if(px<W-1)push(p+1);if(p>=W)push(p-W);if(p<N-W)push(p+W);
+        }
+        for(var p2=0;p2<N;p2++){
+          var i=p2*4,al=1;
+          if(seen[p2]){
+            var m=lum(p2);al=(m-6)/(T-6);al=al<0?0:al>1?1:al;
+            if(al>0&&al<1){a[i]=Math.min(255,a[i]/al);a[i+1]=Math.min(255,a[i+1]/al);a[i+2]=Math.min(255,a[i+2]/al)}
+          }
+          if(p2%W>mx&&((p2/W)|0)>my)al=0;
+          a[i+3]=al*255;
+        }
+        seen.fill(0);
+        ctx.putImageData(d,0,0);
+        if(!shown){shown=true;c.hidden=false;img.style.display='none'}
+      }catch(e){running=false;return}
+      if(v.requestVideoFrameCallback)v.requestVideoFrameCallback(frame);else requestAnimationFrame(frame);
+    }
+    function start(){if(running)return;running=true;v.play().then(function(){frame()}).catch(function(){running=false})}
+    function stop(){running=false;v.pause()}
+    new IntersectionObserver(function(en){en[0].isIntersecting?start():stop()},{threshold:.05}).observe(document.querySelector('.hero'));
+  })();
+  // fixed CTA: hide while the form is on screen
+  var fab=document.getElementById('fab');
+  var hidden={};
+  function sync(){fab.classList.toggle('hide',Object.keys(hidden).some(function(k){return hidden[k]}))}
+  var fo=new IntersectionObserver(function(en){en.forEach(function(e){hidden[e.target.className]=e.isIntersecting});sync()},{threshold:.2});
+  fo.observe(document.querySelector('.price-card'));fo.observe(document.querySelector('footer'));
+  new IntersectionObserver(function(en){hidden.hero=en[0].intersectionRatio>.6;sync()},{threshold:[0,.6,1]}).observe(document.querySelector('.hero'));
+  // horizontal scroll of steps
+  var sec=document.getElementById('steps'),view=sec.querySelector('.steps-view'),track=sec.querySelector('.steps-track');
+  var n=track.children.length,travel=0;
+  function size(){
+    if(innerWidth<=900){sec.style.height='';track.style.transform='';return}
+    var cw=Math.min(1024,view.clientWidth);travel=(n-1)*(cw+16);
+    sec.style.height=(innerHeight+travel)+'px';update();
+  }
+  function update(){
+    if(innerWidth<=900)return;
+    var top=sec.getBoundingClientRect().top;
+    var p=Math.max(0,Math.min(1,-top/travel));
+    track.style.transform='translate3d('+(-p*travel)+'px,0,0)';
+  }
+  addEventListener('scroll',update,{passive:true});addEventListener('resize',size);size();
+  addEventListener('load',size);
+})();
+document.getElementById('lead').addEventListener('submit',function(e){
+  e.preventDefault();
+  this.querySelector('button').style.display='none';
+  document.getElementById('ok').style.display='block';
+});
+</script>
+</body>
+</html>
