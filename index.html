@@ -30,7 +30,8 @@ h2{font-size:clamp(44px,7.5vw,96px);text-align:center}
 
 /* HERO */
 .hero{background:var(--violet);height:100vh;height:100svh;min-height:640px;color:#fff;padding:120px 40px}
-.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:70% 100%;z-index:0;pointer-events:none}
+.hero-vector{position:absolute;right:0;bottom:0;width:1280px;height:900px;max-width:none;pointer-events:none}
+.hero-kids{position:absolute;right:-114px;bottom:-11svh;height:96svh;min-height:600px;width:auto;max-width:none}
 .hero-wave{position:absolute;bottom:0;left:50%;width:2600px;max-width:none;transform:translateX(calc(-50% - 36px));height:120px}
 .nav{position:absolute;top:32px;left:40px;right:40px;display:flex;align-items:center;justify-content:space-between;z-index:3}
 .nav .logo{width:184px}
@@ -175,7 +176,8 @@ footer{--sbg:#fff;padding:120px 40px 200px}
 .hero .nav{animation:fade .8s .1s both}
 .hero h1{animation:rise .9s .15s cubic-bezier(.2,.7,.2,1) both}
 .hero p.lead{animation:rise .9s .45s cubic-bezier(.2,.7,.2,1) both}
-.hero-video{animation:fade 1s both}
+.hero-kids{animation:slidein 1s .2s cubic-bezier(.2,.7,.2,1) both}
+.hero-vector{animation:fade 1s both}
 .js .rv{opacity:0;translate:0 40px;transition:opacity .8s cubic-bezier(.2,.7,.2,1),translate .8s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
 .js .rv.in{opacity:1;translate:0 0}
 .why-card,.dir,.step{transition:transform .25s ease,box-shadow .25s ease}
@@ -230,8 +232,8 @@ footer{--sbg:#fff;padding:120px 40px 200px}
   .why-card .cap{font-size:36px}
   .dir h3{font-size:36px;min-height:0}
   .hero{padding:96px 40px 150px}
-  .hero{background:#6555fa}
-  .hero-video{inset:auto -12% 245px auto;width:125%;height:auto;object-fit:contain;object-position:center;-webkit-mask-image:linear-gradient(to bottom,transparent,#000 22%,#000 100%);mask-image:linear-gradient(to bottom,transparent,#000 22%,#000 100%)}
+  .hero-vector{width:900px;height:633px;right:-300px;bottom:262px}
+  .hero-kids{width:400px;height:auto;min-height:0;top:auto;bottom:262px;right:-40px}
   .hero-content{min-height:0}
   .hero p.lead{max-width:none;margin-bottom:0}
 }
@@ -240,7 +242,8 @@ footer{--sbg:#fff;padding:120px 40px 200px}
 <body>
 
 <section class="hero" id="top">
-  <video class="hero-video" src="assets/hero.mp4" poster="assets/hero-poster.jpg" autoplay muted loop playsinline preload="auto" aria-hidden="true"></video>
+  <img class="hero-vector" src="assets/hero-vector.svg" alt="">
+  <img class="hero-kids" src="assets/hero-kids.avif" alt="Улыбающиеся школьники с тетрадями">
   <img class="hero-wave" src="assets/hero-wave.svg" alt="">
   <nav class="nav">
     <a href="#top"><img class="logo" src="assets/logo.svg" alt="Учи.ру"></a>
